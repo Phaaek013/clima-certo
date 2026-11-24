@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Clima Certo · Limpeza, manutenção, conserto e instalação de ar-condicionado</title>
+<meta name="description" content="Limpeza, manutenção preventiva, conserto, carga de gás e instalação de ar-condicionado split para casas, comércios e escritórios.">
+<meta name="theme-color" content="#1f6f6b">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231f6f6b'/><rect x='5' y='9' width='22' height='10' rx='3' fill='%23f3f4f1' stroke='%231d2326' stroke-width='1.5'/><path d='M9 23c1 2 0 4-1 5M16 23c0 2 0 4 0 5M23 23c-1 2 0 4 1 5' stroke='%23f3f4f1' stroke-width='1.6' fill='none' stroke-linecap='round'/></svg>">
+<link rel="preload" href="fonts/league-gothic-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/libre-franklin-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="lenis.css">
+<link rel="stylesheet" href="scrollcraft.css">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<div class="sc-grain" aria-hidden="true"></div>
+
+<!-- Shared print materials for the drawn unit. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <pattern id="pDots" width="7" height="7" patternUnits="userSpaceOnUse">
+      <circle cx="3.5" cy="3.5" r="1.35" fill="#1d2326" fill-opacity=".38"/>
+    </pattern>
+    <pattern id="pDotsFine" width="5" height="5" patternUnits="userSpaceOnUse">
+      <circle cx="2.5" cy="2.5" r=".9" fill="#1d2326" fill-opacity=".3"/>
+    </pattern>
+    <pattern id="pFins" width="5" height="10" patternUnits="userSpaceOnUse">
+      <rect width="5" height="10" fill="#c3cbca"/><path d="M1.5 0V10" stroke="#1d2326" stroke-opacity=".55" stroke-width="1"/>
+    </pattern>
+    <pattern id="pMesh" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#e2e6e3"/><path d="M0 0L8 8M8 0L0 8" stroke="#1d2326" stroke-opacity=".4" stroke-width=".8"/>
+    </pattern>
+    <pattern id="pBlades" width="10" height="40" patternUnits="userSpaceOnUse" patternTransform="skewX(-26)">
+      <path d="M3 0V40" stroke="#1d2326" stroke-width="2.4" stroke-opacity=".75"/>
+    </pattern>
+    <clipPath id="cCover"><rect x="10" y="14" width="780" height="238" rx="30"/></clipPath>
+  </defs>
+</svg>
+
+<!-- The unit. One object for the whole page; its state is a function of scroll
+     (site.js). Decorative: every service it shows is also written in the copy. -->
+<div class="rig" aria-hidden="true">
+  <div class="rig__pos">
+    <div class="rig__tilt">
+
+      <div class="part" data-part="chassis">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <g stroke="#1d2326" stroke-width="9" fill="none" stroke-linejoin="round">
+            <rect x="130" y="34" width="540" height="182" rx="4"/>
+            <path d="M130 125H670M400 34V216"/>
+          </g>
+          <rect x="18" y="20" width="764" height="228" rx="28" fill="#9aa6a6" stroke="#1d2326" stroke-width="3.5"/>
+          <rect x="40" y="40" width="720" height="190" rx="16" fill="#5c6869" stroke="#1d2326" stroke-width="2"/>
+          <rect x="40" y="40" width="720" height="190" rx="16" fill="url(#pDots)"/>
+          <path d="M140 40V230M260 40V230M380 40V230M500 40V230M620 40V230" stroke="#1d2326" stroke-width="2.5" stroke-opacity=".6"/>
+          <rect class="hl" x="16" y="18" width="768" height="232" rx="30" fill="none" stroke="#e2553b" stroke-width="7"/>
+        </svg>
+        <span class="tag">Chassi e suporte</span>
+      </div>
+
+      <div class="part" data-part="pipes">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <g fill="none" stroke-linecap="round">
+            <path d="M92 214C70 236 50 258 46 330" stroke="#1d2326" stroke-width="18"/>
+            <path d="M92 214C70 236 50 258 46 330" stroke="#c8743f" stroke-width="12"/>
+            <path d="M114 216C98 244 82 270 80 334" stroke="#1d2326" stroke-width="13"/>
+            <path d="M114 216C98 244 82 270 80 334" stroke="#c8743f" stroke-width="7.5"/>
+            <path d="M136 222C130 260 122 290 120 336" stroke="#1d2326" stroke-width="11"/>
+            <path d="M136 222C130 260 122 290 120 336" stroke="#c9d0cf" stroke-width="6"/>
+            <path d="M154 222C154 268 156 300 154 338" stroke="#1d2326" stroke-width="5"/>
+          </g>
+          <g fill="#c8743f" stroke="#1d2326" stroke-width="2"><rect x="78" y="202" width="26" height="14" rx="3"/><rect x="104" y="205" width="20" height="12" rx="3"/></g>
+          <path class="hl" d="M92 214C70 236 50 258 46 330M114 216C98 244 82 270 80 334" fill="none" stroke="#e2553b" stroke-width="22" stroke-linecap="round" stroke-opacity=".9"/>
+        </svg>
+        <span class="tag">Tubulação</span>
+      </div>
+
+      <div class="part" data-part="coil">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <rect x="56" y="36" width="688" height="148" rx="4" fill="url(#pFins)" stroke="#1d2326" stroke-width="3"/>
+          <rect x="56" y="132" width="688" height="52" fill="url(#pDotsFine)" stroke="none"/>
+          <g fill="none" stroke="#1d2326" stroke-width="7.5" stroke-linecap="round">
+            <path d="M58 52a10 10 0 0 0 0 20M58 86a10 10 0 0 0 0 20M58 120a10 10 0 0 0 0 20M58 154a10 10 0 0 0 0 20"/>
+            <path d="M742 52a10 10 0 0 1 0 20M742 86a10 10 0 0 1 0 20M742 120a10 10 0 0 1 0 20M742 154a10 10 0 0 1 0 20"/>
+          </g>
+          <g fill="none" stroke="#c8743f" stroke-width="4" stroke-linecap="round">
+            <path d="M58 52a10 10 0 0 0 0 20M58 86a10 10 0 0 0 0 20M58 120a10 10 0 0 0 0 20M58 154a10 10 0 0 0 0 20"/>
+            <path d="M742 52a10 10 0 0 1 0 20M742 86a10 10 0 0 1 0 20M742 120a10 10 0 0 1 0 20M742 154a10 10 0 0 1 0 20"/>
+          </g>
+          <rect class="hl" x="52" y="32" width="696" height="156" rx="6" fill="none" stroke="#e2553b" stroke-width="7"/>
+        </svg>
+        <span class="tag">Serpentina</span>
+      </div>
+
+      <div class="part" data-part="drum">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <path d="M60 230H740V252Q740 262 730 262H70Q60 262 60 252Z" fill="#3a4447" stroke="#1d2326" stroke-width="3"/>
+          <rect x="30" y="239" width="34" height="13" rx="3" fill="#5c6869" stroke="#1d2326" stroke-width="2"/>
+          <rect x="96" y="188" width="608" height="40" rx="20" fill="#8d9898" stroke="#1d2326" stroke-width="3"/>
+          <rect x="96" y="188" width="608" height="40" rx="20" fill="url(#pBlades)"/>
+          <rect x="96" y="210" width="608" height="18" fill="url(#pDotsFine)" stroke="none"/>
+          <rect x="704" y="190" width="40" height="36" rx="7" fill="#5c6869" stroke="#1d2326" stroke-width="3"/>
+          <g class="noise" fill="none" stroke="#f3f4f1" stroke-width="4" stroke-linecap="round">
+            <path d="M764 196q10 12 0 24M778 188q16 20 0 40M792 180q22 28 0 56"/>
+          </g>
+          <rect class="hl" x="56" y="184" width="692" height="82" rx="10" fill="none" stroke="#e2553b" stroke-width="7"/>
+        </svg>
+        <span class="tag">Turbina e dreno</span>
+      </div>
+
+      <div class="part" data-part="pcb">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <rect x="620" y="58" width="150" height="112" rx="5" fill="#2f6b4f" stroke="#1d2326" stroke-width="3"/>
+          <g fill="none" stroke="#e8b23a" stroke-width="2" stroke-opacity=".9">
+            <path d="M634 76H690V100H740M634 150H660V124H700M712 140H756V86"/>
+          </g>
+          <rect x="676" y="104" width="34" height="26" rx="2" fill="#1d2326"/>
+          <rect x="636" y="88" width="22" height="16" rx="2" fill="#1d2326"/>
+          <circle cx="734" cy="76" r="9" fill="#f3f4f1" stroke="#1d2326" stroke-width="2"/><circle cx="750" cy="146" r="7" fill="#f3f4f1" stroke="#1d2326" stroke-width="2"/>
+          <path d="M690 170C690 196 700 206 718 222" stroke="#1d2326" stroke-width="4" fill="none"/>
+          <path d="M702 170C704 192 714 202 732 214" stroke="#e8b23a" stroke-width="4" fill="none"/>
+          <rect class="hl" x="614" y="52" width="162" height="124" rx="8" fill="none" stroke="#e2553b" stroke-width="7"/>
+        </svg>
+        <span class="tag">Placa eletrônica</span>
+      </div>
+
+      <div class="part" data-part="filters">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <g stroke="#1d2326" stroke-width="3">
+            <rect x="62" y="40" width="330" height="148" rx="6" fill="#e2e6e3"/>
+            <rect x="408" y="40" width="330" height="148" rx="6" fill="#e2e6e3"/>
+          </g>
+          <rect x="74" y="52" width="306" height="124" fill="url(#pMesh)"/>
+          <rect x="420" y="52" width="306" height="124" fill="url(#pMesh)"/>
+          <g fill="#f3f4f1" stroke="#1d2326" stroke-width="2"><rect x="208" y="182" width="40" height="14" rx="3"/><rect x="552" y="182" width="40" height="14" rx="3"/></g>
+          <g class="hl" fill="none" stroke="#e2553b" stroke-width="7"><rect x="58" y="36" width="338" height="156" rx="8"/><rect x="404" y="36" width="338" height="156" rx="8"/></g>
+        </svg>
+        <span class="tag">Filtros de ar</span>
+      </div>
+
+      <div class="part" data-part="cover">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <rect x="10" y="14" width="780" height="238" rx="30" fill="#f3f4f1"/>
+          <g clip-path="url(#cCover)"><rect x="0" y="176" width="800" height="90" fill="url(#pDots)"/></g>
+          <rect x="10" y="14" width="780" height="238" rx="30" fill="none" stroke="#1d2326" stroke-width="3.5"/>
+          <path d="M42 58H758" stroke="#1d2326" stroke-opacity=".4" stroke-width="1.5"/>
+          <rect x="66" y="200" width="668" height="40" rx="14" fill="#2a3336" stroke="#1d2326" stroke-width="3"/>
+          <path class="flap" d="M74 212Q400 222 726 212L726 226Q400 238 74 226Z" fill="#e2e6e3" stroke="#1d2326" stroke-width="2"/>
+          <rect x="626" y="112" width="110" height="50" rx="6" fill="#1d2326"/>
+          <text class="temp" x="681" y="148" text-anchor="middle" font-family="League Gothic, sans-serif" font-size="34" fill="#8fd6cc">22°</text>
+          <circle class="led" cx="610" cy="137" r="4.5" fill="#8fd6cc" stroke="#1d2326" stroke-width="1.5"/>
+          <text x="62" y="118" font-family="Yellowtail, cursive" font-size="34" fill="#1f6f6b">Clima Certo</text>
+          <rect class="hl" x="6" y="10" width="788" height="246" rx="33" fill="none" stroke="#e2553b" stroke-width="7"/>
+        </svg>
+        <span class="tag">Painel frontal</span>
+      </div>
+
+      <div class="part part--air">
+        <svg viewBox="0 0 800 340" width="800" height="340">
+          <g class="air" fill="none" stroke="#f3f4f1" stroke-linecap="round">
+            <path d="M120 248C110 330 40 420 -10 560"/>
+            <path d="M210 250C210 340 170 440 140 580"/>
+            <path d="M300 252C306 340 290 450 280 600"/>
+            <path d="M400 252C404 350 404 460 400 610"/>
+            <path d="M500 252C494 340 510 450 520 600"/>
+            <path d="M590 250C590 340 630 440 660 580"/>
+            <path d="M680 248C690 330 760 420 810 560"/>
+          </g>
+          <g class="heat" fill="none" stroke="#e8b23a" stroke-width="5" stroke-linecap="round">
+            <path d="M200 0c-12-16 12-30 0-46s12-30 0-46"/>
+            <path d="M400 -6c-12-16 12-30 0-46s12-30 0-46"/>
+            <path d="M600 0c-12-16 12-30 0-46s12-30 0-46"/>
+          </g>
+          <g class="drips" fill="#bfe6f0" stroke="#1d2326" stroke-width="1.6">
+            <path d="M0 -8C3 -2 6 1 6 5A6 6 0 0 1 -6 5C-6 1 -3 -2 0 -8Z"/>
+            <path d="M0 -8C3 -2 6 1 6 5A6 6 0 0 1 -6 5C-6 1 -3 -2 0 -8Z"/>
+            <path d="M0 -8C3 -2 6 1 6 5A6 6 0 0 1 -6 5C-6 1 -3 -2 0 -8Z"/>
+          </g>
+        </svg>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<header class="bar">
+  <a class="bar__mark" href="#inicio" aria-label="Clima Certo, início">Clima Certo</a>
+  <nav class="bar__nav" aria-label="Seções">
+    <a href="#servicos">Serviços</a>
+    <a href="#visita">Como funciona</a>
+  </nav>
+  <a class="btn btn--bar" href="#agendar">Agendar visita</a>
+</header>
+
+<main>
+  <!-- The copper line: one continuous pipe down the page, drawn by scroll. -->
+  <div class="pipe" aria-hidden="true"><div class="pipe__track"></div><div class="pipe__fill"></div></div>
+
+  <!-- 1 · FUNCIONANDO -->
+  <section id="inicio" class="hero" data-sc-act="pin" data-sc-span="1.5" data-sc-drift="#1f6f6b">
+    <div data-sc-stage class="hero__stage">
+      <div class="hero__copy" data-sc-cue="0 0.86 0" data-sc-rise="0">
+        <h1 class="hero__title"><span class="hero__caps">Ar-condicionado</span> <span class="hero__script">no clima certo.</span></h1>
+        <p class="hero__sub">Limpeza, manutenção, conserto, carga de gás e instalação de split. Abrimos o aparelho e mostramos o que ele tem.</p>
+
+        <form class="coupon coupon--mini js-lead" novalidate>
+          <p class="coupon__title">Peça uma visita</p>
+          <svg class="coupon__cut" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.5L20 16M8.6 16.5L20 8"/></g></svg>
+          <div class="coupon__row">
+            <label class="line"><span>Nome</span><input name="nome" autocomplete="name" required></label>
+            <label class="line"><span>WhatsApp</span><input name="telefone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+          </div>
+          <input type="hidden" name="servico" value="Ainda não sei, preciso de diagnóstico">
+          <div class="coupon__end">
+            <button class="btn" type="submit">Agendar visita</button>
+            <p class="coupon__status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · SINTOMAS: the unit starts dripping and heating beside the copy. -->
+  <section id="sintomas" class="symptoms" data-sc-act="flow" data-sc-drift="#1f6f6b">
+    <div class="sc-wrap">
+      <div class="symptoms__col" data-sc-in data-sc-stagger="70">
+        <h2 class="symptoms__title">Gela pouco. Pinga na parede. Faz barulho de madrugada.</h2>
+        <p class="symptoms__text">E a conta de luz chega mais alta a cada mês. Quase sempre o problema está lá dentro, numa peça que dá para ver.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · DESMONTE (peak): the unit opens one part per service. -->
+  <section id="servicos" class="tear" data-sc-act="pin" data-sc-span="8" data-sc-drift="#1f6f6b">
+    <div data-sc-stage class="tear__stage">
+      <div class="tear__scrim" aria-hidden="true"></div>
+
+      <div class="tear__copy">
+        <div class="panel panel--intro" data-sc-cue="0 0.08 0" data-sc-rise="0">
+          <h2 class="panel__title panel__title--xl">Vamos abrir o aparelho.</h2>
+          <p class="panel__text">Peça por peça, de fora para dentro, com o serviço que cada uma pede.</p>
+        </div>
+
+        <article class="panel" data-sc-cue="0.075 0.22" data-sc-rise="0">
+          <h3 class="panel__title">Limpeza e higienização</h3>
+          <p class="panel__text">Filtros e painel lavados, bandeja e serpentina higienizadas com produto bactericida. O ar volta a sair sem cheiro e sem poeira.</p>
+          <p class="panel__when"><strong>Quando chamar:</strong> cheiro de mofo ao ligar, poeira saindo pela aleta, rinite piorando em casa.</p>
+        </article>
+
+        <article class="panel" data-sc-cue="0.21 0.35" data-sc-rise="0">
+          <h3 class="panel__title">Manutenção preventiva</h3>
+          <p class="panel__text">Revisão da evaporadora e da condensadora: serpentina, pressões, conexões e corrente do compressor. Plano periódico para casas e PMOC para empresas.</p>
+          <p class="panel__when"><strong>Quando chamar:</strong> gela menos que antes, gelo na serpentina, faz tempo da última revisão.</p>
+        </article>
+
+        <article class="panel" data-sc-cue="0.34 0.48" data-sc-rise="0">
+          <h3 class="panel__title">Gotejamento e ruído</h3>
+          <p class="panel__text">Desobstrução da mangueira de dreno, nivelamento do aparelho e limpeza da turbina. A água para de escorrer e o barulho vai embora.</p>
+          <p class="panel__when"><strong>Quando chamar:</strong> água pingando na parede, vibração ou estalos, fluxo de ar fraco.</p>
+        </article>
+
+        <article class="panel" data-sc-cue="0.47 0.61" data-sc-rise="0">
+          <h3 class="panel__title">Conserto e diagnóstico</h3>
+          <p class="panel__text">Testamos placa, sensores e componentes elétricos para achar a causa do defeito antes de trocar qualquer peça.</p>
+          <p class="panel__when"><strong>Quando chamar:</strong> não liga ou desliga sozinho, luz piscando no visor, controle não responde.</p>
+        </article>
+
+        <article class="panel" data-sc-cue="0.60 0.74" data-sc-rise="0">
+          <h3 class="panel__title">Carga de gás e vazamentos</h3>
+          <p class="panel__text">Localizamos o vazamento, refazemos a solda ou a conexão e só então completamos o gás na pressão certa.</p>
+          <p class="panel__when"><strong>Quando chamar:</strong> sai vento mas não gela, gelo na tubulação, compressor ligando sem parar.</p>
+        </article>
+
+        <article class="panel" data-sc-cue="0.73 0.87" data-sc-rise="0">
+          <h3 class="panel__title">Instalação</h3>
+          <p class="panel__text">Suporte nivelado, vácuo na tubulação, dreno com caimento e ponto elétrico dedicado. Também desinstalamos e mudamos o aparelho de lugar.</p>
+          <p class="panel__when"><strong>Quando chamar:</strong> aparelho novo na caixa, mudança de casa, troca de cômodo.</p>
+        </article>
+
+        <div class="panel panel--outro" data-sc-cue="0.88 1 0.12 0.12" data-sc-rise="0">
+          <h2 class="panel__title panel__title--xl">Tudo de volta no lugar.</h2>
+          <p class="panel__text">Montado, testado na sua frente e gelando na temperatura certa.</p>
+        </div>
+      </div>
+
+      <nav class="parts" aria-label="Peças do aparelho">
+        <p class="parts__head">Peças</p>
+        <ol>
+          <li><button type="button" data-goto="0">Painel e filtros</button></li>
+          <li><button type="button" data-goto="1">Serpentina</button></li>
+          <li><button type="button" data-goto="2">Turbina e dreno</button></li>
+          <li><button type="button" data-goto="3">Placa eletrônica</button></li>
+          <li><button type="button" data-goto="4">Tubulação</button></li>
+          <li><button type="button" data-goto="5">Chassi e suporte</button></li>
+        </ol>
+      </nav>
+    </div>
+  </section>
+
+  <!-- 4 · A VISITA: pan on the white page. -->
+  <section id="visita" class="visit" data-sc-act="pan" data-sc-span="4.6" data-sc-drift="#1f6f6b">
+    <div data-sc-stage class="visit__stage">
+      <div class="rail" data-sc-pan="0.04">
+        <div class="rail__lead">
+          <h2 class="visit__title">Como é a visita</h2>
+          <p class="visit__intro">Do primeiro contato ao aparelho gelando, sem surpresa no meio.</p>
+        </div>
+        <article class="step step--text" style="--i:1">
+          <span class="step__n">1</span>
+          <h3>Chamado</h3>
+          <p>Você conta o que está acontecendo pelo cupom ou pelo WhatsApp e escolhe dia e horário.</p>
+        </article>
+        <article class="step step--scene" style="--i:2">
+          <svg class="step__art" viewBox="0 0 260 160" aria-hidden="true">
+            <ellipse cx="130" cy="150" rx="110" ry="8" fill="url(#pDots)" stroke="none"/>
+            <g fill="none" stroke-linecap="round">
+              <path d="M100 120c-6 18-40 20-80 26" stroke="#1d2326" stroke-width="10"/><path d="M100 120c-6 18-40 20-80 26" stroke="#1f6f6b" stroke-width="5"/>
+              <path d="M130 122c0 14 0 20 2 28" stroke="#1d2326" stroke-width="10"/><path d="M130 122c0 14 0 20 2 28" stroke="#e8b23a" stroke-width="5"/>
+              <path d="M160 120c6 18 40 20 80 26" stroke="#1d2326" stroke-width="10"/><path d="M160 120c6 18 40 20 80 26" stroke="#c8743f" stroke-width="5"/>
+            </g>
+            <rect x="72" y="94" width="116" height="28" rx="5" fill="#9aa6a6"/>
+            <rect x="72" y="108" width="116" height="14" fill="url(#pDotsFine)" stroke="none"/>
+            <rect x="72" y="94" width="116" height="28" rx="5"/>
+            <path d="M84 94v-8h12v8M164 94v-8h12v8" fill="#e2e6e3"/>
+            <circle cx="92" cy="52" r="36" fill="#f3f4f1" stroke="#1f6f6b" stroke-width="7"/>
+            <circle cx="168" cy="52" r="36" fill="#f3f4f1" stroke="#e8b23a" stroke-width="7"/>
+            <circle cx="92" cy="52" r="40"/><circle cx="168" cy="52" r="40"/>
+            <path d="M66 66l5-3M68 40l5 3M92 22v6M116 40l-5 3M118 66l-5-3M142 66l5-3M144 40l5 3M168 22v6M192 40l-5 3M194 66l-5-3" stroke-width="2"/>
+            <path d="M70 74a30 30 0 0 0 44 0" fill="url(#pDotsFine)" stroke="none"/><path d="M146 74a30 30 0 0 0 44 0" fill="url(#pDotsFine)" stroke="none"/>
+            <path d="M92 52l-14-16M168 52l18-12" stroke-width="3.5"/>
+            <circle cx="92" cy="52" r="4" fill="#1d2326"/><circle cx="168" cy="52" r="4" fill="#1d2326"/>
+          </svg>
+          <div class="step__body">
+            <span class="step__n">2</span>
+            <h3>Diagnóstico</h3>
+            <p>O técnico liga o manifold e mede pressão, corrente, dreno e temperatura de saída antes de propor qualquer coisa.</p>
+          </div>
+        </article>
+        <article class="step step--text" style="--i:3">
+          <span class="step__n">3</span>
+          <h3>Orçamento</h3>
+          <p>Você aprova o valor antes de qualquer peça ser trocada. Nenhum serviço feito sem combinar.</p>
+        </article>
+        <article class="step step--text" style="--i:4">
+          <span class="step__n">4</span>
+          <h3>Serviço</h3>
+          <p>Proteção no chão e nos móveis, ferramenta certa para cada peça e a área limpa no fim.</p>
+        </article>
+        <article class="step step--scene" style="--i:5">
+          <svg class="step__art" viewBox="0 0 260 160" aria-hidden="true">
+            <rect x="20" y="10" width="180" height="56" rx="10" fill="#f3f4f1"/>
+            <rect x="22" y="44" width="176" height="20" fill="url(#pDotsFine)" stroke="none"/>
+            <rect x="20" y="10" width="180" height="56" rx="10"/>
+            <rect x="34" y="46" width="152" height="12" rx="5" fill="#2a3336"/>
+            <text x="34" y="32" font-family="Yellowtail, cursive" font-size="14" fill="#1f6f6b" stroke="none">Clima Certo</text>
+            <g fill="none" stroke-width="3" stroke-dasharray="8 6"><path d="M60 62c-4 30-14 50-24 76"/><path d="M100 62c0 30-2 50-4 80"/><path d="M140 62c2 30 6 50 12 80"/></g>
+            <path d="M196 120L128 104" stroke-width="3"/>
+            <rect x="196" y="92" width="48" height="60" rx="8" fill="#e8b23a"/>
+            <rect x="204" y="100" width="32" height="20" rx="3" fill="#1d2326"/>
+            <text x="220" y="116" text-anchor="middle" font-family="League Gothic, sans-serif" font-size="16" fill="#8fd6cc" stroke="none">22°</text>
+            <circle cx="220" cy="136" r="6" fill="#f3f4f1"/>
+          </svg>
+          <div class="step__body">
+            <span class="step__n">5</span>
+            <h3>Teste</h3>
+            <p>Ligamos o aparelho com você e medimos a temperatura de saída antes de ir embora.</p>
+          </div>
+        </article>
+        <div class="rail__note">
+          <p>Casas, comércios e escritórios. Contratos de manutenção e PMOC para empresas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · AGENDAR: the mail-in coupon, last element. -->
+  <section id="agendar" class="close" data-sc-act="flow" data-sc-drift="#1f6f6b">
+    <div class="close__inner sc-wrap">
+      <div class="close__lead">
+        <div class="mini" aria-hidden="true">
+          <svg viewBox="0 0 400 220" width="400" height="220">
+            <rect x="6" y="8" width="388" height="118" rx="16" fill="#f3f4f1" stroke="#1d2326" stroke-width="3"/>
+            <rect x="8" y="92" width="384" height="32" fill="url(#pDotsFine)" stroke="none"/>
+            <rect x="34" y="98" width="332" height="20" rx="7" fill="#2a3336" stroke="#1d2326" stroke-width="2"/>
+            <path class="mini__flap" d="M38 104Q200 110 362 104L362 111Q200 118 38 111Z" fill="#e2e6e3" stroke="#1d2326" stroke-width="1.5"/>
+            <rect x="300" y="48" width="66" height="32" rx="4" fill="#1d2326"/>
+            <text class="mini__temp" x="333" y="73" text-anchor="middle" font-family="League Gothic, sans-serif" font-size="24" fill="#8fd6cc">28°</text>
+            <text x="30" y="62" font-family="Yellowtail, cursive" font-size="22" fill="#1f6f6b">Clima Certo</text>
+            <g class="mini__air" fill="none" stroke="#1d2326" stroke-width="3.5" stroke-linecap="round">
+              <path d="M80 128C76 166 56 196 40 218"/><path d="M140 129C140 166 130 196 124 218"/>
+              <path d="M200 129C202 166 200 196 200 218"/><path d="M260 129C260 166 270 196 276 218"/>
+              <path d="M320 128C324 166 344 196 360 218"/>
+            </g>
+          </svg>
+        </div>
+        <h2 class="close__title">Agende uma visita</h2>
+        <p class="close__text">Conte o que o aparelho está fazendo. Respondemos com dia, horário e o que levar para resolver na primeira visita.</p>
+        <p class="close__small">Atendemos casas, comércios e escritórios.</p>
+      </div>
+
+      <form class="coupon coupon--full js-lead" id="form" novalidate>
+        <p class="coupon__title">Cupom de visita</p>
+        <svg class="coupon__cut" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.6 7.5L20 16M8.6 16.5L20 8"/></g></svg>
+        <label class="line"><span>Nome</span><input name="nome" autocomplete="name" required></label>
+        <label class="line"><span>WhatsApp</span><input name="telefone" type="tel" inputmode="tel" autocomplete="tel" required></label>
+        <fieldset class="choices">
+          <legend>Serviço</legend>
+          <label><input type="radio" name="servico" value="Limpeza e higienização" checked><span>Limpeza e higienização</span></label>
+          <label><input type="radio" name="servico" value="Manutenção preventiva"><span>Manutenção preventiva</span></label>
+          <label><input type="radio" name="servico" value="Gotejamento e ruído"><span>Gotejamento e ruído</span></label>
+          <label><input type="radio" name="servico" value="Conserto e diagnóstico"><span>Conserto e diagnóstico</span></label>
+          <label><input type="radio" name="servico" value="Carga de gás e vazamentos"><span>Carga de gás e vazamentos</span></label>
+          <label><input type="radio" name="servico" value="Instalação"><span>Instalação</span></label>
+          <label><input type="radio" name="servico" value="Ainda não sei, preciso de diagnóstico"><span>Ainda não sei</span></label>
+        </fieldset>
+        <label class="line"><span>Bairro e cidade</span><input name="bairro" autocomplete="address-level2"></label>
+        <label class="line line--area"><span>O que está acontecendo</span><textarea name="mensagem" rows="2"></textarea></label>
+        <div class="coupon__end">
+          <button class="btn btn--lg" type="submit">Agendar visita</button>
+          <p class="coupon__status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+
+    <footer class="foot sc-wrap">
+      <span class="foot__mark">Clima Certo</span>
+      <span>Climatização residencial e comercial · © 2026</span>
+    </footer>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="scrollcraft.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
