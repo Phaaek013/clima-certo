@@ -17,7 +17,7 @@ colors:
 typography:
   display:
     fontFamily: "League Gothic, Arial Narrow, sans-serif"
-    fontSize: "clamp(3.2rem, 1rem + 8vw, 6rem)"
+    fontSize: "clamp(2.6rem, min(6.4vw, 10vh), 6rem)"
     fontWeight: 400
     lineHeight: 0.9
     letterSpacing: "0.01em"
@@ -312,7 +312,7 @@ Drawing-only greys (#9aa6a6 chassis, #5c6869 interior, #8d9898 drum, #2a3336 ven
 The ramp is set per role, not on a modular scale. Fluid clamps carry the scene headings and body; fixed rem sizes carry print furniture (buttons, coupon titles, step titles, wordmark) that should not swing with the viewport. Every size below is in the frontmatter and in use.
 
 League Gothic, weight 400, uppercase:
-- **Display** (clamp(3.2rem, 1rem + 8vw, 6rem), 0.9): the hero "AR-CONDICIONADO".
+- **Display** (clamp(2.6rem, min(6.4vw, 10vh), 6rem), 0.9; phones clamp(2.6rem, 1rem + 8vw, 3.6rem); landscape phones 2.6rem): the hero "AR-CONDICIONADO", bound by height so it stays one line on short wide screens.
 - **Step numeral** (clamp(4.5rem, 3rem + 3vw, 7rem), 0.8, tabular): the large turquoise figure that heads each typeset step in the visit strip.
 - **Headline** (clamp(3rem, 1.6rem + 4vw, 5.6rem), 0.92): visit and coupon act titles, teardown intro and outro.
 - **Symptoms headline** (clamp(2.6rem, 1.4rem + 4vw, 5rem), 0.95; on phones clamp(2.1rem, 1.3rem + 4vw, 2.8rem)): the three-symptom line.

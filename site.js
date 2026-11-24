@@ -7,7 +7,8 @@
   'use strict';
 
   // Número do WhatsApp que recebe os pedidos: DDI + DDD + número, só dígitos.
-  // Exemplo: '5511999999999'. Vazio = o cupom avisa que falta configurar.
+  // Exemplo: '5511999999999'. Vazio = modo demonstração (projeto de portfólio):
+  // o cupom mostra a mensagem que seria enviada e não envia nada.
   var WHATSAPP = '';
 
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -87,18 +88,51 @@
   }
 
   var vw = innerWidth, vh = innerHeight, mobile = vw < 860, V = vectors(mobile);
-  addEventListener('resize', function () { vw = innerWidth; vh = innerHeight; mobile = vw < 860; V = vectors(mobile); }, { passive: true });
+
+  // Where the hero headline's ink actually ends. On short, wide screens the
+  // headline climbs to the unit's height, so the unit must start right of it.
+  var heroCaps = $('.hero__caps'), heroCopy = $('.hero__copy'), titleRight = 0, copyTop = 0;
+  function measureTitle() {
+    // The whole copy column (headline, subtitle, coupon), not only the headline.
+    var r = document.createRange();
+    r.selectNodeContents(heroCaps);
+    titleRight = Math.max(r.getBoundingClientRect().right, heroCopy.getBoundingClientRect().right);
+    copyTop = heroCopy.offsetTop;   // inside the pinned stage, so scroll-independent
+  }
+  measureTitle();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measureTitle);
+
+  addEventListener('resize', function () {
+    vw = innerWidth; vh = innerHeight; mobile = vw < 860; V = vectors(mobile); measureTitle();
+  }, { passive: true });
+
+  function heroPreset() {
+    if (mobile) {
+      // Phones stack the unit above the copy: fit it in the band between the
+      // top bar and the headline, however short the screen is (landscape).
+      // The drawn body spans 238 units (y 14..252) around the rig's centre at
+      // y 170, so it sits 156 units above centre and 82 below.
+      var top = 64, band = Math.max(copyTop - top - 12, 40);
+      var ms = Math.min(vw * 0.88 / 800, 0.75, band / 238);
+      return { cx: vw * 0.5, cy: top + 156 * ms + (band - 238 * ms) * 0.4, s: ms };
+    }
+    var gap = 40, right = vw - Math.max(24, vw * 0.04);
+    var w = Math.min(vw * 0.5, 780, vh * 0.92, right - (titleRight + gap));
+    var cx = Math.max(vw * 0.68, titleRight + gap + w / 2);
+    cx = Math.min(cx, right - w / 2);
+    return { cx: cx, cy: vh * 0.36, s: Math.max(w, 280) / 800 };
+  }
 
   function presets() {
     if (mobile) {
       return {
-        hero: { cx: vw * 0.5, cy: vh * 0.24, s: Math.min(vw * 0.88, 600) / 800 },
+        hero: heroPreset(),
         sym:  { cx: vw * 0.5, cy: vh * 0.22, s: Math.min(vw * 0.8, 560) / 800 },
         tear: { cx: vw * 0.5, cy: vh * 0.33, s: Math.min(vw * 0.74, vh * 0.36) / 800 }
       };
     }
     return {
-      hero: { cx: vw * 0.68, cy: vh * 0.36, s: Math.min(vw * 0.5, 780, vh * 0.92) / 800 },
+      hero: heroPreset(),
       sym:  { cx: vw * 0.72, cy: vh * 0.48, s: Math.min(vw * 0.42, 640) / 800 },
       tear: { cx: vw * (vw > 1100 ? 0.615 : 0.67), cy: vh * 0.5, s: Math.min(vw * (vw > 1100 ? 0.4 : 0.36), vh * 0.68, 700) / 800 }
     };
@@ -320,7 +354,19 @@
         (get('mensagem') ? 'O que está acontecendo: ' + get('mensagem') : '');
 
       if (!WHATSAPP) {
-        status.textContent = 'Pedido pronto. Falta configurar o número de WhatsApp da empresa para enviar.';
+        // Demonstration mode: show what the company would receive, send nothing.
+        status.textContent = '';
+        var note = document.createElement('p');
+        note.className = 'coupon__note';
+        note.textContent = 'Projeto de demonstração: nenhum pedido foi enviado.' +
+          (form.classList.contains('coupon--full') ? ' Esta é a mensagem que chegaria no WhatsApp da empresa:' : ' No cupom do fim da página dá para ver a mensagem completa.');
+        status.appendChild(note);
+        if (form.classList.contains('coupon--full')) {
+          var pre = document.createElement('pre');
+          pre.className = 'coupon__preview';
+          pre.textContent = msg;
+          status.appendChild(pre);
+        }
         return;
       }
       // A real link the visitor taps: popups are blocked in many embeds and in-app browsers.
